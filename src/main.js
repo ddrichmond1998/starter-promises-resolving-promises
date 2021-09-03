@@ -1,5 +1,10 @@
 const { welcome, goodbye, tell } = require("../utils/fortune-teller");
 
-const promise = welcome();
+const question= "Will the weather be nice today?";
 
-console.log(promise);
+welcome()
+.then(console.log)
+.then(()=> {
+    goodbye().then(console.log);
+});
+   
